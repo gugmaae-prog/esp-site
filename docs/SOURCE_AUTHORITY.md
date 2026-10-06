@@ -2,43 +2,79 @@
 
 Verified: 6 October 2026.
 
-## Repo 1 — Website
+## Website source
 
 `gugmaae-prog/esp-site`
 
-Owns the public website/source-recovery record for:
+Owns the website/public-site source record for:
+
 - `espacios-public-shell`
 - `espacios-marketing-site`
 - `espacios-seo`
 
-The small wrapper Workers are fully mirrored here. The large compiled marketing bundle is inventoried, but is still Cloudflare-authoritative until its editable build source is recovered.
+The wrapper Workers are mirrored here. The large compiled marketing bundle is inventoried, while Cloudflare remains authoritative for its full compiled multipart source until editable source is recovered.
 
-## Repo 2 — Map / Intelligence
+## Map / intelligence source
 
 `gugmaae-prog/espacios`
 
 Owns:
+
 - `espacios.me/map`
 - `psr-portfolio-map-v2`
-- Map assets/tests/builds
-- historical intelligence and Smart Estimates
+- historical intelligence and provenance
+- Smart Estimates
+- Map tests/build scripts
 - production Map manifests
 - Supabase `espacios-map-control` source
-- Map release evidence and data methodology
+- Map release evidence
 
-Do not move Map code into `esp-site` as canonical source.
+Do not treat `esp-site` as Map source.
 
-## Platform back ends
+## Supabase
 
-The following remain Cloudflare-authoritative and are dependencies, not website frontend source:
+Project:
+
+```text
+entity
+ref: ypkfganbwdvcjrcxygta
+region: ap-southeast-1
+status: ACTIVE_HEALTHY
+```
+
+Role:
+
+- shared backend for Aether/platform data;
+- Google/contact/email integration tables;
+- selected Edge Functions;
+- Map runtime/release control registry.
+
+Supabase is **not** the public website's primary marketing-content database.
+
+## Cloudflare
+
+Cloudflare remains production runtime authority for:
+
+- website Workers and routes;
+- Workspace/auth Workers;
+- AI router;
+- D1 / R2 / Queues / KV / Vectorize;
+- Mail / Newsroom / Data Hub;
+- Map runtime.
+
+## Back ends not yet mirrored as website source
+
 - `espacios-auth-central`
 - `espacios-ai-router`
 - `espacios-mail`
 - `espacios-data-hub`
 - `espacios-newsroom`
 
-## Production rule
+These are platform services, not frontend source.
 
-Do not auto-deploy `esp-site` to production from the compiled snapshot.
+## Rule
 
-First recover editable source, reproduce the live output, run desktop/mobile/hydration acceptance, compare to the production snapshot, and only then introduce reviewed CI/CD.
+`esp-site` = website source.
+`espacios` = Map/intelligence source.
+Supabase = shared backend/control.
+Cloudflare = runtime.

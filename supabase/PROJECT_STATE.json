@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-10-06",
+  "project": {
+    "name": "entity",
+    "ref": "ypkfganbwdvcjrcxygta",
+    "region": "ap-southeast-1",
+    "status": "ACTIVE_HEALTHY",
+    "postgres_version": "17.6.1.063"
+  },
+  "public_schema": {
+    "table_count": 82,
+    "rls_enabled_count": 82,
+    "rls_disabled_tables": [],
+    "notable_rows": {
+      "aether_memories": 119020,
+      "espacios_map_runtime_config": 1,
+      "espacios_map_release_registry": 4
+    }
+  },
+  "edge_functions": [
+    {
+      "slug": "sync-worker",
+      "status": "ACTIVE",
+      "version": 2,
+      "verify_jwt": true
+    },
+    {
+      "slug": "contacts-v2-api",
+      "status": "ACTIVE",
+      "version": 4,
+      "verify_jwt": true
+    },
+    {
+      "slug": "google-sync-v2",
+      "status": "ACTIVE",
+      "version": 4,
+      "verify_jwt": true
+    },
+    {
+      "slug": "smtp-send-v1",
+      "status": "ACTIVE",
+      "version": 2,
+      "verify_jwt": true
+    },
+    {
+      "slug": "psr-ai-api",
+      "status": "ACTIVE",
+      "version": 1,
+      "verify_jwt": true
+    },
+    {
+      "slug": "espacios-map-control",
+      "status": "ACTIVE",
+      "version": 3,
+      "verify_jwt": false
+    }
+  ],
+  "advisors": {
+    "security_findings": 0,
+    "performance": {
+      "unused_index_count": 100,
+      "note": "Informational only. Do not remove indexes solely from this lint."
+    }
+  },
+  "secrets_included": false
+}
