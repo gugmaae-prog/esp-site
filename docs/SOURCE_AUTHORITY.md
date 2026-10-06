@@ -1,62 +1,44 @@
-# Source Authority
+# Espacios Source Authority
 
-Verified: 6 October 2026
+Verified: 6 October 2026.
 
-## Repository ownership
+## Repo 1 — Website
 
-### `gugmaae-prog/esp-site`
-Owns the Espacios **website/public-site source record**.
+`gugmaae-prog/esp-site`
 
-Current live public-site chain:
-
-```text
-espacios.me/*
-  -> espacios-public-shell
-     -> espacios-marketing-site
-     -> espacios-seo
-```
-
-The snapshot in this repository was pulled from the live Cloudflare Workers without modifying production.
-
-### `gugmaae-prog/espacios`
-Owns the Espacios **Map and UAE intelligence/data product**.
-
-Current Map chain:
-
-```text
-espacios.me/map*
-  -> espacios-map-shell
-  -> psr-portfolio-map-v2
-  -> Cloudflare D1/R2 + PSR_PROPERTY
-  -> Supabase Map control/audit plane
-```
-
-The current Map release is maintained and tested in the `espacios` repository. Do not copy Map production source into this repo as the canonical source.
-
-## What is not yet fully mirrored
-
-The broader Workspace/API back end remains Cloudflare-authoritative:
-- `espacios-auth-central`
-- `espacios-ai-router`
-- Mail, Data Hub and Newsroom Workers
-
-They are dependencies of the website/platform, but they are not website frontend source.
-
-## Cloudflare live website Workers
-
+Owns the public website/source-recovery record for:
 - `espacios-public-shell`
 - `espacios-marketing-site`
 - `espacios-seo`
 
-The exact deployed bundle is stored under `production-snapshot/2026-10-06/`.
+The small wrapper Workers are fully mirrored here. The large compiled marketing bundle is inventoried, but is still Cloudflare-authoritative until its editable build source is recovered.
 
-## Deployment policy
+## Repo 2 — Map / Intelligence
 
-Do not wire automatic production deployment from this snapshot until editable source is reconstructed and verified.
+`gugmaae-prog/espacios`
 
-Recommended path:
-1. Recover/refactor editable website source.
-2. Reproduce the live bundle.
-3. Verify desktop/mobile and hydration behavior.
-4. Compare generated output with the live snapshot.
-5. Only then introduce a reviewed deployment workflow.
+Owns:
+- `espacios.me/map`
+- `psr-portfolio-map-v2`
+- Map assets/tests/builds
+- historical intelligence and Smart Estimates
+- production Map manifests
+- Supabase `espacios-map-control` source
+- Map release evidence and data methodology
+
+Do not move Map code into `esp-site` as canonical source.
+
+## Platform back ends
+
+The following remain Cloudflare-authoritative and are dependencies, not website frontend source:
+- `espacios-auth-central`
+- `espacios-ai-router`
+- `espacios-mail`
+- `espacios-data-hub`
+- `espacios-newsroom`
+
+## Production rule
+
+Do not auto-deploy `esp-site` to production from the compiled snapshot.
+
+First recover editable source, reproduce the live output, run desktop/mobile/hydration acceptance, compare to the production snapshot, and only then introduce reviewed CI/CD.

@@ -1,60 +1,51 @@
 # Espacios Website
 
-This repository is the **website/public-site source repository** for `espacios.me`.
+This repository is the source-control home for the **Espacios website/public-site layer** at `espacios.me`.
 
-## Two-repository split
+## Two-repository architecture
 
-| Repository | Authority |
+| Repository | Canonical responsibility |
 | --- | --- |
-| `gugmaae-prog/esp-site` | Espacios website/public shell and website deployment snapshots |
-| `gugmaae-prog/espacios` | Espacios Map, UAE intelligence/data research, Map tests, Map production manifests and Supabase Map control-plane source |
+| `gugmaae-prog/esp-site` | Website/public shell, website deployment snapshots, website recovery/source reconciliation |
+| `gugmaae-prog/espacios` | Espacios Map, UAE intelligence/data research, Map tests, Map manifests, historical intelligence and Supabase Map control-plane source |
 
-This split is intentional. Do **not** deploy the Map from this repository and do **not** treat the `espacios` Map repository as a full website source mirror.
+The split is intentional.
 
-## Current live website topology
+## Live website chain
 
 ```text
 Browser
   -> espacios.me/*
      -> espacios-public-shell
-        -> MARKETING service -> espacios-marketing-site
-        -> SEO service       -> espacios-seo
+        -> MARKETING -> espacios-marketing-site
+        -> SEO       -> espacios-seo
 ```
 
-Important API/Workspace routes are still handled by `espacios-auth-central`; AI routing is handled by `espacios-ai-router`. Those back-end Workers are not mirrored here yet because this repository is for the website/public site.
+Workspace/API back-end routes are still handled by `espacios-auth-central` and AI routing by `espacios-ai-router`. Those are platform back ends, not frontend source, and are not mirrored here yet.
 
-## Production snapshot
+## 6 October 2026 production snapshot
 
-A read-only snapshot of the **currently deployed website Workers** was added under:
+This repo contains:
+- the **complete live `espacios-public-shell` Worker source**;
+- the **complete live `espacios-seo` Worker source**;
+- exact Cloudflare binding/deployment metadata for all three website Workers;
+- the **module inventory** for the live `espacios-marketing-site` compiled bundle.
+
+The marketing Worker is a 23-module compiled Cloudflare/Vite/SSR bundle of roughly 8.36 MB. The current connector cannot export that complete multipart bundle without truncation, so this repo **does not falsely claim a full marketing-site source mirror**. Cloudflare remains authoritative for that compiled bundle until editable source is recovered/reconciled.
+
+Paths:
 
 ```text
 production-snapshot/2026-10-06/
-  espacios-public-shell/
-  espacios-marketing-site/
-  espacios-seo/
+  espacios-public-shell/worker.js
+  espacios-seo/worker.js
+  espacios-marketing-site/MODULE_INVENTORY.json
+cloudflare/live-website-bindings.json
+docs/SOURCE_AUTHORITY.md
 ```
-
-The marketing Worker is a compiled Cloudflare/Vite/SSR bundle. The snapshot is for **recovery, diffing and source reconciliation**. It should not be mistaken for clean editable application source.
-
-See:
-- `docs/SOURCE_AUTHORITY.md`
-- `cloudflare/live-website-bindings.json`
 
 ## Safety
 
-This repository is public.
+This repo is public. Never commit Cloudflare tokens, Supabase service-role keys, OAuth secrets, lead/CRM exports, mail credentials or private customer data.
 
-Never commit:
-- Cloudflare API tokens
-- Supabase service-role keys
-- OAuth client secrets
-- customer/lead exports
-- private CRM records
-- mail provider credentials
-- source-embedded tokens
-
-The production snapshot was scanned for common credential formats before commit. Secret **binding names** may appear in deployment documentation, but secret values must remain in Cloudflare/Supabase secret stores.
-
-## Frontend rule
-
-The October 6 snapshot was created **without changing the live frontend**. It is a source-control synchronization only.
+No live frontend changes were made when creating this repository snapshot.

@@ -1,0 +1,121 @@
+{
+  "verified_at": "2026-10-06",
+  "worker": "espacios-marketing-site",
+  "note": "Exact live compiled module inventory. Full compiled multipart source remains Cloudflare-authoritative because connector export truncates large responses.",
+  "deployment": {
+    "id": "198f2392-b126-4e0b-89a5-ce8fd5bd21ce",
+    "source": "api",
+    "strategy": "percentage",
+    "author_email": "thekeifferjapeth@gmail.com",
+    "annotations": {
+      "workers/message": "Automatic deployment on upload.",
+      "workers/triggered_by": "upload"
+    },
+    "versions": [
+      {
+        "version_id": "643daaaf-38a5-4915-9b83-9ee46f449bda",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-05T12:39:09.110755Z"
+  },
+  "compatibility_date": "2026-07-26",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "parts": [
+    {
+      "name": "ssr/assets/route-contract-DKMZR9ZL.js",
+      "bytes": 6067
+    },
+    {
+      "name": "ssr/assets/router-BBQok7lD.js",
+      "bytes": 23243
+    },
+    {
+      "name": "ssr/assets/workspace-client-C-s0XeLI.js",
+      "bytes": 10848
+    },
+    {
+      "name": "ssr/assets/Icon-CHj4xEMx.js",
+      "bytes": 3337
+    },
+    {
+      "name": "ssr/assets/LoginExperience-dbj7THt4.js",
+      "bytes": 9112
+    },
+    {
+      "name": "ssr/assets/PricingExperience-CXUyj1-O.js",
+      "bytes": 10858
+    },
+    {
+      "name": "ssr/assets/ProposalForm-DPwWJkTO.js",
+      "bytes": 23922
+    },
+    {
+      "name": "__vite_rsc_assets_manifest.js",
+      "bytes": 6772
+    },
+    {
+      "name": "ssr/__vite_rsc_assets_manifest.js",
+      "bytes": 6772
+    },
+    {
+      "name": "ssr/assets/AdminConsole-kSJfozZ1.js",
+      "bytes": 23692
+    },
+    {
+      "name": "ssr/assets/FloatingAssistant-CR5p6z6N.js",
+      "bytes": 6997
+    },
+    {
+      "name": "ssr/assets/ThemeControl-Bm6QZOLR.js",
+      "bytes": 2967
+    },
+    {
+      "name": "ssr/index.js",
+      "bytes": 586531
+    },
+    {
+      "name": "workspace-ui-assets.js",
+      "bytes": 5106464
+    },
+    {
+      "name": "index.js",
+      "bytes": 2214526
+    },
+    {
+      "name": "seamless-controls.js",
+      "bytes": 5655
+    },
+    {
+      "name": "ssr/assets/EspaciosLogo-28bELevs.js",
+      "bytes": 721
+    },
+    {
+      "name": "ssr/assets/ScrollExperience-BT_c5PAN.js",
+      "bytes": 9145
+    },
+    {
+      "name": "ssr/assets/SiteHeader-a2eSPRGZ.js",
+      "bytes": 3041
+    },
+    {
+      "name": "ssr/assets/layout-segment-context-CEDQIqhO.js",
+      "bytes": 1741
+    },
+    {
+      "name": "ssr/assets/link-R7mqIJIC.js",
+      "bytes": 24623
+    },
+    {
+      "name": "ssr/assets/WorkspaceApp-DD_ApiM-.js",
+      "bytes": 312391
+    },
+    {
+      "name": "ssr/assets/error-boundary-_JnU4AT9.js",
+      "bytes": 8418
+    }
+  ],
+  "total_bytes": 8407843
+}
