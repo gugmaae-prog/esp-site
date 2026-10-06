@@ -1,3 +1,0 @@
-Source: https://github.com/anthropics/skills/tree/main/skills/frontend-design
-License: Apache-2.0 (see LICENSE.txt)
-Unmodified copy, retrieved 2026-10-06.
