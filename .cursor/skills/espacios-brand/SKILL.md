@@ -14,10 +14,10 @@ The source of truth is the live public stylesheet at `https://espacios.me/__espa
 Public and Workspace chrome is a quiet light system, with a dark theme that swaps the same roles. It is not a new palette, a serif editorial layout, or a cyan map skin.
 
 - Type is the system stack already aliased as `--font-geist-sans`: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif`. Body copy is forced to that stack with `font-style: normal`. Do not add Inter, a display serif, a monospace label face, or a downloaded webfont.
-- Headings use that same family. Public scale is `--esp-public-h1: 4rem`, `--esp-public-h2: 2.625rem`, `--esp-public-h3: 1.75rem`, line-height `1.08`, tracking `0`. Do not italicize or recolor a single word in a headline.
+- Headings use that same family. Match the live agency headings already on the page: section titles are `clamp(2rem, 3vw, 2.625rem)`, weight 520, line-height about 1.03, tracking about -0.055em. Hero titles keep their current line break and italic second line. Do not add new italic words or a new type scale.
 - Default theme is light (`espacios_theme_v1`, `data-espacios-theme` and `data-theme`). Dark mode only remaps the theme tokens below.
 - The mark is the official wordmark image, `/brand/espacios-official-wordmark.png`. Public logo width is about 78px, header logo `clamp(78px, 7vw, 94px)`. Do not redraw the wordmark, substitute a lettermark, or set the name in a new typeface.
-- Surfaces are translucent paper on a cool gray-blue canvas, with a soft indigo wash. Panels are 24px (`--eg-panel-radius`), controls 16px, widgets 18px, small utilities 12px. The public header is a pill (`999px`) with about 24–28px backdrop blur. Do not flatten everything to hairline rectangles, and do not put one radius on every element.
+- Surfaces are translucent paper on a cool gray-blue canvas, with a soft indigo wash. Reuse the components already on the page. Service cards are the 20px gradient cards. Workspace tiles are the 17px articles. Buttons are the existing pills: primary is the indigo gradient, secondary is the translucent white pill. The public header is a pill with about 24–28px backdrop blur. Do not draw a second card style.
 - Keyboard focus uses the existing control line: light `#596779`, dark `#c4cbd7`, inset 1px. Pointer focus does not add an extra outline. Keep hit targets at least 44px on mobile.
 - Color roles, light: canvas `#edf3fb`, text `#172033`, muted `#5f6d85`, line `#45567626`, accent `#4459c7`, on-accent `#fff`. Public ink `#15192a`, blue `#4459c7`, violet `#8067d8`, apricot `#e89465`. Supporting tints are `#7fa6ff`, `#a98cff`, `#f1a36f` on pearl `#fbfbfd`.
 - Color roles, dark: canvas `#0d1320`, text `#f3f6ff`, muted `#b7c2d6`, line `#dae6ff26`, accent `#a9b5ff`, on-accent `#111827`.
@@ -29,7 +29,7 @@ These read as generated design. Do not introduce them on top of Espacios:
 
 - A new palette, including cream and terracotta, acid green, vermilion, or the map's older cyan/gold skin (`#7ee8ff` on `#07121c`). That map sheet is not the website brand.
 - Gradient decoration, glassmorphism, or shadow that does not use the existing tokens.
-- Tracked-out eyebrows, `01 / 02 / 03` markers, middle-dot meta lines, or arrows stuck on every link. The site already has a few of these. Leave them. Do not add more.
+- A second card, button, or heading style. The site already uses eyebrows, numbers, and the arrow on service links. Leave those. Do not add a new set.
 - Identical card grids, one soft gray shadow, and a fade-up on every section.
 - Emoji, exclamation-mark marketing, or clever labels. Buttons name the action in sentence case: "Request trial access", not "Get started" and not "Submit".
 
