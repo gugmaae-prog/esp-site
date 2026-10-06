@@ -41,17 +41,19 @@ Do not add a generated kit on top of the site: identical cards with one gray sha
 
 ## Motion
 
-The live motion is the motion system. Do not install GSAP or Motion.
+Use CSS. Do not install GSAP or Motion. Pick one style for the job. Do not stack them.
 
-- Buttons lift about 2px in roughly 180ms. Cards ease shadow and transform in about 200ms. The theme crossfades for 200ms only while the theme is changing.
-- Peer pages (Home, Services, Work, Workspace, Resources) are full document loads. They crossfade for 140ms so the cut is not a flash. The header is the same object and does not fade or slide. Do not use a 400–600ms wipe. The map does not crossfade.
-- Do not add scroll reveals, staggers, magnetic hovers, parallax, or split-text.
+Shared rules for every style: under 300ms unless the table says otherwise, `transform` and `opacity` only, never `transition: all`, never `scale(0)`, never `ease-in` on interface motion. Enter and exit with `cubic-bezier(0.23, 1, 0.32, 1)`. On-screen movement uses `cubic-bezier(0.77, 0, 0.175, 1)`. Reduced motion keeps opacity and color and drops travel. Hover motion only runs for a fine pointer. Anything the person can fire twice in a second must be interruptible.
 
-New motion has to name its job: feedback, continuity, state, or stopping a jump. If it is only decoration on something used all day, do not animate it.
+| Style | Job | Espacios use | Timing |
+| --- | --- | --- | --- |
+| Press | The control heard the person | Buttons. Lift about 2px. Release is snappier than the press. | 100–160ms, ease |
+| Hover lift | Feedback on a card the pointer can actually hover | Existing service cards ease shadow and transform. Do not add tilt or a magnetic pull. | 150–200ms, ease |
+| Crossfade | Stop a hard cut between peers | Home, Services, Work, Workspace, Resources. Header stays still. The map does not fade. | 140ms |
+| Shared element | The same object continues | Header, wordmark, theme control. No slide. | 0ms on the header |
+| Pop | Something came from a control | Menus and popovers scale from the trigger, starting near `scale(0.95)` plus opacity. Modals stay centered. | 125–200ms, ease-out |
+| State | A value changed | Theme swap, selected pill, toggle. Color and opacity only while the theme attribute is changing. | 200ms |
+| Reveal | A group arrives once | A short list that just appeared, 30–80ms between items, total still under 300ms. Not every section on scroll. | 200–300ms, ease-out |
+| Progress | Waiting | One skeleton or spinner. Kill it when the content arrives. Skip it if the wait is under 300ms. | Loop under 1.5s, or none |
 
-- UI motion stays under 300ms. Enter and exit with `cubic-bezier(0.23, 1, 0.32, 1)`. Never `ease-in` on interface motion.
-- Animate `transform` and `opacity` only. Do not start from `scale(0)`.
-- Popovers grow from the control that opened them. Modals stay centered.
-- Press can be slightly slower than release. Anything the person can trigger twice in a second must be interruptible.
-- Reduced motion keeps opacity and color and drops movement. Hover motion only applies for a fine pointer.
-- One moment per surface. Do not fade every section in on load.
+Do not use a screen wipe, parallax, split-text, or a scroll-pinned story on these pages. Those are a different product. A page people open all day gets Press, Hover lift, Crossfade, Shared element, and State. Reveal is only for a list that was not on screen a moment ago.
