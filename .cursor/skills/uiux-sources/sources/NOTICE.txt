@@ -1,0 +1,5 @@
+Pulled 2026-10-06, unmodified skill texts.
+nextlevelbuilder/ui-ux-pro-max-skill — MIT (UI-UX-PRO-MAX-LICENSE). Stars at pull: 133,442.
+pbakaus/impeccable — Apache-2.0 (IMPECCABLE-LICENSE). Stars at pull: 77,240.
+vercel-labs/agent-skills — see upstream repository license. Stars at pull: 31,980.
+anthropics/skills frontend-design is already in ../frontend-design. Stars at pull: 179,844.
