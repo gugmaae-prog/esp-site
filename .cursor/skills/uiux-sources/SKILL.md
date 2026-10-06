@@ -13,6 +13,7 @@ These were read from the highest-starred UI/UX skill repos on 6 October 2026. Th
 | `nextlevelbuilder/ui-ux-pro-max-skill` | 133,442 | UX priority order and interaction rules. |
 | `pbakaus/impeccable` | 77,240 | Polish an existing product. The brief wins. |
 | `vercel-labs/agent-skills` | 31,980 | Interface review and view transitions. |
+| `emilkowalski/skills` | 43,766 | When motion should exist, and the curves and durations. |
 
 Anthropic’s own `brand-guidelines` skill is Anthropic’s palette and type (Poppins, Lora, orange `#d97757`). Never apply it here.
 
@@ -21,8 +22,8 @@ Anthropic’s own `brand-guidelines` skill is Anthropic’s palette and type (Po
 1. `espacios-brand`. The live site is the brief.
 2. Impeccable: refinement preserves identity, copy, and behavior. Polish is not a redesign.
 3. UI/UX Pro Max priorities 1–3 and 5–9: accessibility, 44px targets, reserved image space, no horizontal scroll, 16px body, semantic tokens, motion that can be reduced, labels on fields, predictable navigation.
-4. Vercel view transitions: a shared element stays put; a sideways move between peer pages is a short fade, not a slide that pretends there is depth.
-5. UI/UX Pro Max palette, font pairing, and `--design-system` search. Do not generate a new system.
+4. Vercel view transitions and Emil Kowalski’s motion rules, below.
+5. UI/UX Pro Max palette, font pairing, GSAP scroll choreography, and `--design-system` search. Do not generate a new system.
 
 ## What the skills agree on
 
@@ -32,6 +33,24 @@ Anthropic’s own `brand-guidelines` skill is Anthropic’s palette and type (Po
 - Motion is one idea, interruptible, and off when reduced motion is requested. Do not fade every section in on load.
 - Buttons name the action. Errors name the problem and the recovery. Empty states tell the person what to do.
 - Peer pages (Home, Services, Work, Workspace, Resources) crossfade. The header is the same object and does not fade or slide.
+
+## Motion
+
+Read `emil-animate.SKILL.md`, `emil-review-animations.SKILL.md`, `impeccable-animate.md`, and `uupm-motion.csv` before adding movement. The live site already has its motion. Match it. Do not install GSAP or Motion.
+
+Page changes are a full document load. The purpose is preventing a hard cut, not a story. Keep the 140ms fade. Hold the header. Do not slide peer pages. Do not wipe the screen with an overlay. UI/UX Pro Max’s standard page transition (400–600ms) is too slow for this nav.
+
+Existing feedback stays: buttons lift about 2px in roughly 180ms, cards ease their shadow and transform in about 200ms, and the theme crossfade is 200ms only while the theme is changing. Do not add scroll reveals, staggers, magnetic hovers, parallax, or split-text.
+
+When new motion is actually needed:
+
+- Name the job first: feedback, continuity, state, or stopping a jump. If it is only decoration on something used all day, do not animate it.
+- UI motion stays under 300ms. Enter and exit with a strong ease-out, `cubic-bezier(0.23, 1, 0.32, 1)`. Never `ease-in` on interface motion.
+- Animate `transform` and `opacity` only. Do not use `transition: all`. Do not start from `scale(0)`.
+- Popovers grow from the control that opened them. Modals stay centered.
+- Press can be slightly slower than release. Anything the person can trigger twice in a second must be interruptible.
+- Reduced motion keeps opacity and color and drops movement. Hover motion only applies for a fine pointer.
+- One moment per surface. Do not fade every section in on load.
 
 ## What they would change, and must not
 
