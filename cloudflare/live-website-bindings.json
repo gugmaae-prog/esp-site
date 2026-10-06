@@ -1,0 +1,127 @@
+{
+  "verified_at": "2026-10-06",
+  "account_id": "b1b843ec85bc39a3a4d370ba4f84f17a",
+  "workers": {
+    "espacios-public-shell": {
+      "compatibility_date": "2026-09-23",
+      "compatibility_flags": [],
+      "bindings": [
+        {
+          "name": "MARKETING",
+          "type": "service",
+          "service": "espacios-marketing-site"
+        },
+        {
+          "name": "SEO",
+          "type": "service",
+          "service": "espacios-seo"
+        }
+      ],
+      "deployment": {
+        "id": "64d179ef-f7f9-4330-b15b-eca51b1dec38",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "thekeifferjapeth@gmail.com",
+        "annotations": {
+          "workers/message": "Automatic deployment on upload.",
+          "workers/triggered_by": "upload"
+        },
+        "versions": [
+          {
+            "version_id": "100f0ffc-2569-45cf-90dd-0cdc659d1afe",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-10-05T10:29:13.253237Z"
+      },
+      "parts": []
+    },
+    "espacios-marketing-site": {
+      "compatibility_date": "2026-07-26",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "DB",
+          "type": "d1",
+          "database_id": "90f65b40-7240-486d-a152-8d355413f57c"
+        },
+        {
+          "name": "EMAIL",
+          "type": "send_email"
+        },
+        {
+          "name": "IMAGES",
+          "type": "images"
+        },
+        {
+          "name": "MEDIA",
+          "type": "r2_bucket",
+          "bucket_name": "espacios-marketing-media"
+        },
+        {
+          "name": "NEWSROOM",
+          "type": "service",
+          "service": "espacios-newsroom"
+        }
+      ],
+      "deployment": {
+        "id": "198f2392-b126-4e0b-89a5-ce8fd5bd21ce",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "thekeifferjapeth@gmail.com",
+        "annotations": {
+          "workers/message": "Automatic deployment on upload.",
+          "workers/triggered_by": "upload"
+        },
+        "versions": [
+          {
+            "version_id": "643daaaf-38a5-4915-9b83-9ee46f449bda",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-10-05T12:39:09.110755Z"
+      },
+      "parts": [
+        {
+          "name": "ssr/assets/ThemeControl-Bm6QZOLR.js",
+          "bytes": 2967
+        }
+      ]
+    },
+    "espacios-seo": {
+      "compatibility_date": "2026-09-23",
+      "compatibility_flags": [],
+      "bindings": [],
+      "deployment": {
+        "id": "c781f1bf-1b69-45ac-84f0-575f914ef3a7",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "thekeifferjapeth@gmail.com",
+        "annotations": {
+          "workers/message": "Verification correction: precise robots boundar...",
+          "workers/triggered_by": "upload"
+        },
+        "versions": [
+          {
+            "version_id": "2139aae5-6b36-4e08-8230-7150ed0b6cb6",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-23T08:20:00.310847Z"
+      },
+      "parts": [
+        {
+          "name": "worker.js",
+          "bytes": 3304
+        }
+      ]
+    }
+  },
+  "note": "Secret values intentionally excluded. Snapshot creation did not modify Cloudflare."
+}
