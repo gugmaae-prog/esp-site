@@ -101,7 +101,9 @@ supabase/PROJECT_STATE.json
 
 `espacios-marketing-site` is currently a 23-module compiled Cloudflare/Vite/SSR bundle of about 8.4 MB.
 
-The connected Cloudflare export interface truncates very large multipart Worker downloads, so this repo does **not** claim to contain the complete compiled marketing Worker bundle. Cloudflare remains runtime-authoritative for that bundle until editable source is fully recovered and reconciled.
+The 6 October snapshot records the earlier large-export limitation. A fresh 7 October recovery now preserves all 23 exact compiled modules, with independently verified SHA256 hashes and real UTF8 byte sizes, under `production-snapshot/2026-10-07/espacios-marketing-site/`. The complete multipart response was hashed inside the connector and matched to existing local bytes, avoiding large tool-output truncation.
+
+This recovers compiled runtime source and readable Workspace JavaScript; it does **not** recover the original TSX, source maps or original authoring project. Cloudflare remains production runtime authority. See [source recovery and fidelity](docs/SOURCE_RECOVERY_2026-10-07.md).
 
 ## Safety
 
