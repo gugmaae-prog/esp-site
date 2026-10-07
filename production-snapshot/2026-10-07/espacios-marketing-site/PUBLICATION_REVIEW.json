@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "reviewedAt": "2026-10-07T06:00:17.450Z",
+  "scope": "Exact 23-module Marketing source plus decoded 108 public assets. No Auth/Router Worker implementations/config, customer exports or private fixtures are proposed.",
+  "credentialAndPrivateFixtureFindings": [],
+  "staticAssignmentReview": [],
+  "runtimeTokenInterpolationMatches": 13,
+  "staticEmailReview": [
+    {
+      "valueSha256": "652740e1be1cdb970e9b471c980ac4dfbe1578616e92f5b46769a2d10d408c9a",
+      "domain": "company.com",
+      "classification": "login placeholder",
+      "occurrences": 13
+    },
+    {
+      "valueSha256": "e06fbffd1f6b2aaba04d4d6ad5b4424238fa9633d7f4d4badc45f6090c40624e",
+      "domain": "espacios.me",
+      "classification": "public product/service email",
+      "occurrences": 30
+    },
+    {
+      "valueSha256": "0d3130093db05afdb931914b33dea1a2fb3fd6a10443ec3478810c345d773395",
+      "domain": "gmail.com",
+      "classification": "already-public deployment author used in SSR profile normalization",
+      "occurrences": 2
+    },
+    {
+      "valueSha256": "ab780d8a05829c85c1844ec03f3b578eedab15ec60be97017cb4cfc3a40cec7e",
+      "domain": "espacios.me",
+      "classification": "public product/service email",
+      "occurrences": 15
+    },
+    {
+      "valueSha256": "bbd2a6cc0a86c59e0e16237ddbea597532fbe9b2471a5a268e2decdf4537030c",
+      "domain": "espacios.me",
+      "classification": "public product/service email",
+      "occurrences": 2
+    },
+    {
+      "valueSha256": "0a061d5bca17849440da9a7ff80889546f0ca02b211d4be5b4672067a01e103a",
+      "domain": "espacios.me",
+      "classification": "public product/service email",
+      "occurrences": 1
+    }
+  ],
+  "unreviewedEmailCount": 0,
+  "originalAuthoringSourceMapsFound": 0,
+  "customerApisRead": false,
+  "rawSecretsPrinted": false,
+  "limitation": "Pattern scans support review; they are not a guarantee against every unknown secret format. Compiled Marketing SSR/server actions and the already-public owner email remain visible in exact code.",
+  "publicationDecision": "Prepared for root review; no GitHub write or deployment performed."
+}

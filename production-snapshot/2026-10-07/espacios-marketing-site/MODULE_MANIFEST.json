@@ -1,0 +1,168 @@
+{
+  "verified_at": "2026-10-07T05:50:31.596Z",
+  "worker": "espacios-marketing-site",
+  "deployment_id": "198f2392-b126-4e0b-89a5-ce8fd5bd21ce",
+  "versions": [
+    {
+      "version_id": "643daaaf-38a5-4915-9b83-9ee46f449bda",
+      "percentage": 100
+    }
+  ],
+  "main_module": "index.js",
+  "compatibility_date": "2026-07-26",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "recovery_method": "Fresh complete Cloudflare content/v2 multipart hashed inside the connector; existing local23-module source reused only after every exact byte SHA256 and UTF8 size matched.",
+  "fidelity": "Exact compiled Cloudflare Worker module bytes; original TSX, source maps and original authoring/build project are not recovered.",
+  "module_count": 23,
+  "total_utf8_bytes": 8408551,
+  "parts": [
+    {
+      "name": "ssr/assets/LoginExperience-dbj7THt4.js",
+      "type": "application/javascript+module",
+      "bytes": 9121,
+      "sha256": "1586a3e912083bf1005fa04460f4d0a8671eae1908ff512f1257502e7958c700"
+    },
+    {
+      "name": "ssr/assets/PricingExperience-CXUyj1-O.js",
+      "type": "application/javascript+module",
+      "bytes": 10866,
+      "sha256": "9b2df640cd343876c0a6b6b6c94fc6ecd77f43fcb3ea386713237188f72aa6d8"
+    },
+    {
+      "name": "ssr/assets/link-R7mqIJIC.js",
+      "type": "application/javascript+module",
+      "bytes": 24643,
+      "sha256": "50fc99dd29afcce90d78462bbc8f98090efdf27346e83efedc15ec620e46ddb3"
+    },
+    {
+      "name": "ssr/assets/router-BBQok7lD.js",
+      "type": "application/javascript+module",
+      "bytes": 23265,
+      "sha256": "72f882292401338866983d5882f7ca6cdaa33de0fcbf7281a0f42b4bb35bf22b"
+    },
+    {
+      "name": "__vite_rsc_assets_manifest.js",
+      "type": "application/javascript+module",
+      "bytes": 6772,
+      "sha256": "31947ab06fe5060fb4266b25973bb1a2f36c43770b74f5e4552f92d5f51b5f1c"
+    },
+    {
+      "name": "index.js",
+      "type": "application/javascript+module",
+      "bytes": 2214936,
+      "sha256": "e8610c86cfb501e278008a01c0f01b273dd3bea77ddae092c3c8bc22f36678cc"
+    },
+    {
+      "name": "ssr/__vite_rsc_assets_manifest.js",
+      "type": "application/javascript+module",
+      "bytes": 6772,
+      "sha256": "31947ab06fe5060fb4266b25973bb1a2f36c43770b74f5e4552f92d5f51b5f1c"
+    },
+    {
+      "name": "ssr/assets/Icon-CHj4xEMx.js",
+      "type": "application/javascript+module",
+      "bytes": 3337,
+      "sha256": "8e6e779072da07852ca1d5230e34a14e571b6f94ec3810acb72d2ff28781fdba"
+    },
+    {
+      "name": "ssr/assets/ProposalForm-DPwWJkTO.js",
+      "type": "application/javascript+module",
+      "bytes": 23954,
+      "sha256": "5849cae984e889c0d8d7f4882241467162932abc4e651a3447aa4abda937da5a"
+    },
+    {
+      "name": "ssr/assets/SiteHeader-a2eSPRGZ.js",
+      "type": "application/javascript+module",
+      "bytes": 3041,
+      "sha256": "5357503b5b3e30b66ca249ff7a4a73e052625753b9e5c2eb003d54e625d7c428"
+    },
+    {
+      "name": "ssr/assets/WorkspaceApp-DD_ApiM-.js",
+      "type": "application/javascript+module",
+      "bytes": 312529,
+      "sha256": "fc92adf7479c349933e65576b8ba7ae4e42a3c655c1ebf1a1dc16091d331d5f2"
+    },
+    {
+      "name": "ssr/assets/layout-segment-context-CEDQIqhO.js",
+      "type": "application/javascript+module",
+      "bytes": 1741,
+      "sha256": "2b0adf5bd9ea122b2a84cb977ff2862c807b1d46f1f6815bd3a154708d3f2f4c"
+    },
+    {
+      "name": "ssr/assets/ScrollExperience-BT_c5PAN.js",
+      "type": "application/javascript+module",
+      "bytes": 9145,
+      "sha256": "77b69cd6511d51c8242100ea85200dcf545eae7103ba8e7845763152bf22d29b"
+    },
+    {
+      "name": "ssr/assets/workspace-client-C-s0XeLI.js",
+      "type": "application/javascript+module",
+      "bytes": 10848,
+      "sha256": "aa47ebc19f8c96645f625b3751d3c9891950aec231832bc09c12fc0509a2b397"
+    },
+    {
+      "name": "workspace-ui-assets.js",
+      "type": "application/javascript+module",
+      "bytes": 5106464,
+      "sha256": "ec1aae2b606d302946b9e2f1a4fb19850872fd87cc2622211bb5cb4f40d05e4d"
+    },
+    {
+      "name": "ssr/assets/ThemeControl-Bm6QZOLR.js",
+      "type": "application/javascript+module",
+      "bytes": 2967,
+      "sha256": "48a5436cdcdeb2f1fa98929bf138fbc8993981d4aa795dd77ad25339c9ca94f1"
+    },
+    {
+      "name": "seamless-controls.js",
+      "type": "application/javascript+module",
+      "bytes": 5655,
+      "sha256": "386ccb86d6381466dfc7efb820d152016947b35d9fbb509b0eae986fcc771dfc"
+    },
+    {
+      "name": "ssr/assets/AdminConsole-kSJfozZ1.js",
+      "type": "application/javascript+module",
+      "bytes": 23706,
+      "sha256": "22e00a1e0c206e175836c923a39fc31040115ec3e2fdd23886093776f94814bb"
+    },
+    {
+      "name": "ssr/assets/error-boundary-_JnU4AT9.js",
+      "type": "application/javascript+module",
+      "bytes": 8418,
+      "sha256": "17ac3017ce14c61be22d8e46956b096eb72f8d22a4d2939f1e6d0886b649cec4"
+    },
+    {
+      "name": "ssr/assets/route-contract-DKMZR9ZL.js",
+      "type": "application/javascript+module",
+      "bytes": 6067,
+      "sha256": "b8d6503f6bedbab89b599c6cfadb654956f7134d61cd6527a5237953e1e698bd"
+    },
+    {
+      "name": "ssr/index.js",
+      "type": "application/javascript+module",
+      "bytes": 586573,
+      "sha256": "4ab2c2f715414badc8a772590a2e84c9aab434b8bd94e8d804775396375a942b"
+    },
+    {
+      "name": "ssr/assets/EspaciosLogo-28bELevs.js",
+      "type": "application/javascript+module",
+      "bytes": 721,
+      "sha256": "4379fabcb47627d4fe9b203ab250aab2e90fd50bea0f8828178314c8c6c5ed10"
+    },
+    {
+      "name": "ssr/assets/FloatingAssistant-CR5p6z6N.js",
+      "type": "application/javascript+module",
+      "bytes": 7010,
+      "sha256": "5a9f8bfad1a4552c639183f8e987e7f5bdc3484301c6a36365add675028e5441"
+    }
+  ],
+  "source_export_complete": true,
+  "ui_or_behavior_changed": false,
+  "auth_router_workers_included": false,
+  "customer_records_or_fixtures_included": false,
+  "map_owner_included": false,
+  "current_graph_revision": "20261005-3ee6fcf7622c",
+  "immutable_asset_count": 108,
+  "deploy_automation_enabled": false
+}

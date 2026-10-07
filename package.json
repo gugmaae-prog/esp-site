@@ -1,0 +1,15 @@
+{
+  "name": "espacios-site-source-recovery",
+  "version": "2026.10.7",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node scripts/verify-marketing-snapshot.mjs",
+    "verify:privacy": "node scripts/review-marketing-privacy.mjs",
+    "build:snapshot": "node scripts/build-marketing-snapshot.mjs",
+    "verify:workspace-build": "node scripts/rebuild-workspace-client.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

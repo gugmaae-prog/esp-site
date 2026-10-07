@@ -12,7 +12,7 @@ Owns the website/public-site source record for:
 - `espacios-marketing-site`
 - `espacios-seo`
 
-The wrapper Workers are mirrored here. The large compiled marketing bundle is inventoried, while Cloudflare remains authoritative for its full compiled multipart source until editable source is recovered.
+The wrapper Workers are mirrored here. The 7 October snapshot now preserves all 23 exact compiled Marketing Worker modules with independent SHA256/UTF8 size parity. Original TSX/source maps and the original authoring build remain unavailable; see `SOURCE_RECOVERY_2026-10-07.md`. Cloudflare remains production runtime authority. This compiled snapshot is a source record, not an application release.
 
 ## Map / intelligence source
 
